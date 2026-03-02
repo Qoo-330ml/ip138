@@ -4,7 +4,7 @@ ip138
 ip138 IP 地理位置信息查询API
 
 http://www.ip138.com/
-适配ip138最新查询页面，改用https://www.ipshudi.com/查询
+适配ip138最新查询页面，改用https://www.ipshudi.com/ 查询
 
 |travis|
 |pypi|
