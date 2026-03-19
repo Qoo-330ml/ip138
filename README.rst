@@ -1,57 +1,31 @@
-20260302fork，修复脚本，适配ip138最新查询页面，改用https://www.ipshudi.com/ 查询
-
+20260302 fork，修复脚本，适配 ip138 最新查询页面，改用 https://www.ipshudi.com/ 查询
 
 =====
-ip138
+iip-138
 =====
-ip138 IP 地理位置信息查询API
+Python IP 地理位置信息查询工具（仓库名 `ip138`，发布包名改为 `iip-138`）
 
-http://www.ip138.com/
+安装：
 
-
-|travis|
-|pypi|
-|license|
-
-
-=============================
-Installation 安装 (git clone)
-=============================
 .. code-block:: bash
 
-    git clone https://github.com/KellyHwong/ip138
-    cd ip138
-    pip install .
+    pip install iip-138
 
-==========
-Usage 用法
-==========
+命令行：
+
 .. code-block:: bash
 
-    ip138 --ip={Your Query IP Address}
+    iip-138 --ip=172.217.161.164
 
-============
-Example 例子
-============
+兼容旧命令（也保留）：
+
 .. code-block:: bash
 
     ip138 --ip=172.217.161.164
 
+Python 调用：
 
-======================
-import usage import 使用
-======================
 .. code-block:: python
 
     from ip138.ip138 import ip138
     ip138("111.111.111.111")
-
-
-.. |travis| image:: https://travis-ci.org/RicterZ/nhentai.svg?branch=master
-   :target: https://travis-ci.org/RicterZ/nhentai
-
-.. |pypi| image:: https://img.shields.io/pypi/dm/ip138.svg
-   :target: https://pypi.org/project/ip138/
-
-.. |license| image:: https://img.shields.io/github/license/kellyhwong/ip138.svg
-   :target: https://github.com/KellyHwong/ip138/blob/master/LICENSE

@@ -17,19 +17,19 @@ def long_description():
 
 
 setup(
-    name='ip138',
+    name='iip-138',
     version=__version__,
-    author='KellyHwong',
-    author_email='dianhuangkan@gmail.com',
-    description='ip138.com comics downloader',
+    author='Qoo-330ml',
+    author_email='opensource@users.noreply.github.com',
+    description='IP 地理位置信息查询工具（适配 ipshudi 页面）',
     long_description=long_description(),
-    keywords=['ip138', 'comics'],
-    maintainer='KellyHwong',
-    maintainer_email='dianhuangkan@gmail.com',
+    keywords=['ip138', 'ip', 'geolocation'],
+    maintainer='Qoo-330ml',
+    maintainer_email='opensource@users.noreply.github.com',
     license='MIT',
     packages=find_packages(),
     platforms=["all"],
-    url='https://github.com/KellyHwong/ip138',
+    url='https://github.com/Qoo-330ml/ip138',
     install_requires=requirements,
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -44,6 +44,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
+            'iip-138 = ip138.command:main',
             'ip138 = ip138.command:main',
         ]
     },
