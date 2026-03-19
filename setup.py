@@ -3,11 +3,22 @@
 from __future__ import print_function, unicode_literals
 import sys
 import codecs
+from pathlib import Path
 from setuptools import setup, find_packages
 from ip138 import __version__, __author__, __email__
 
-with open('requirements.txt') as f:
-    requirements = [l for l in f.read().splitlines() if l]
+BASE_DIR = Path(__file__).resolve().parent
+REQ_FILE = BASE_DIR / 'requirements.txt'
+if REQ_FILE.exists():
+    requirements = [l.strip() for l in REQ_FILE.read_text(encoding='utf-8').splitlines() if l.strip()]
+else:
+    # Fallback for isolated build environments where requirements.txt is absent
+    requirements = [
+        'requests>=2.5.0',
+        'BeautifulSoup4>=4.0.0',
+        'future>=0.15.2',
+        'lxml>=4.2.0',
+    ]
 
 
 def long_description():

@@ -9,6 +9,7 @@ on:
       - 'setup.py'
       - 'setup.cfg'
       - 'requirements.txt'
+      - 'MANIFEST.in'
       - 'README.rst'
       - '.github/workflows/publish-ip138.yml'
   workflow_dispatch:
