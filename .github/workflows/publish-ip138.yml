@@ -1,4 +1,4 @@
-name: Publish ip-138 to PyPI
+name: Publish qoo-ip138 to PyPI
 
 on:
   push:
