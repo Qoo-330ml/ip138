@@ -13,14 +13,14 @@ pip install qoo-ip138
 ## 命令行
 
 ```bash
-qoo-ip138 --ip=172.217.161.164
+qoo-ip138 --ip=202.108.22.5
 ```
 
 ## Python 调用
 
 ```python
 from qoo_ip138 import qoo_ip138
-qoo_ip138("111.111.111.111")
+qoo_ip138("202.108.22.5")
 ```
 
 ## 功能特性
