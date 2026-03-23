@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qoo-ip138"
+version = "0.1.1"
+description = "IP 地理位置信息查询工具（适配 ipshudi 页面）"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Qoo-330ml" }
+]
+license = { text = "MIT" }
+keywords = ["ip", "geolocation", "ip138", "requests"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "requests>=2.5.0",
+  "beautifulsoup4>=4.0.0",
+  "lxml>=4.2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/Qoo-330ml/ip138"
+Repository = "https://github.com/Qoo-330ml/ip138"
+Issues = "https://github.com/Qoo-330ml/ip138/issues"
+
+[project.scripts]
+qoo-ip138 = "qoo_ip138.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["qoo_ip138*"]
+
+[tool.setuptools.package-data]
+qoo_ip138 = []
