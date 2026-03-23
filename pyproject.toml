@@ -11,7 +11,6 @@ requires-python = ">=3.8"
 authors = [
   { name = "Qoo-330ml" }
 ]
-license = "MIT"
 keywords = ["ip", "geolocation", "ip138", "requests"]
 classifiers = [
   "Programming Language :: Python :: 3",
