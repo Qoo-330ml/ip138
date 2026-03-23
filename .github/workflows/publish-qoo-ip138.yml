@@ -1,0 +1,50 @@
+name: Publish qoo-ip138 to PyPI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'qoo_ip138/**'
+      - 'pyproject.toml'
+      - 'MANIFEST.in'
+      - 'README.md'
+      - '.github/workflows/publish-qoo-ip138.yml'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+
+      - name: Show Python version
+        run: python3 --version
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install build twine
+
+      - name: Build package
+        run: |
+          python3 -m build
+
+      - name: Check package
+        run: |
+          python3 -m twine check dist/*
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN_QOO_IP138 }}
+        run: |
+          python3 -m twine upload --verbose --skip-existing dist/*
